@@ -1,0 +1,130 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#e5e7eb;
+padding:20px;
+}
+
+.header{
+text-align:center;
+margin-bottom:30px;
+}
+
+.header h1{
+font-size:28px;
+font-weight:600;
+}
+
+.overall{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-bottom:40px;
+position:relative;
+}
+
+.donut{
+transform:rotate(-90deg);
+}
+
+.donut-bg{
+fill:none;
+stroke:#334155;
+stroke-width:16;
+}
+
+.donut-progress{
+fill:none;
+stroke:url(#gradient);
+stroke-width:16;
+stroke-linecap:round;
+stroke-dasharray:502;
+stroke-dashoffset:502;
+transition:stroke-dashoffset 0.8s ease;
+}
+
+.donut-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align:center;
+}
+
+.donut-text span{
+font-size:28px;
+font-weight:600;
+}
+
+.donut-text p{
+font-size:14px;
+color:#94a3b8;
+}
+
+.subjects{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card h2{
+margin-bottom:12px;
+}
+
+.progress-bar{
+height:10px;
+background:#334155;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+.progress-fill{
+height:100%;
+width:0%;
+background:#3b82f6;
+border-radius:20px;
+transition:width 0.6s ease;
+}
+
+.checkbox-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:10px;
+}
+
+.checkbox-grid input{
+width:22px;
+height:22px;
+cursor:pointer;
+accent-color:#3b82f6;
+transform:scale(1);
+transition:transform 0.2s;
+}
+
+.checkbox-grid input:checked{
+transform:scale(1.2);
+}
+
+@media(max-width:600px){
+
+.checkbox-grid{
+grid-template-columns:repeat(5,1fr);
+}
+
+}

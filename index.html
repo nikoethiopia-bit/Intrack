@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Tracker</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Study Tracker</h1>
+</header>
+
+<!-- OVERALL PROGRESS -->
+<section class="overall">
+  <svg class="donut" width="200" height="200">
+    <circle class="donut-bg" cx="100" cy="100" r="90"></circle>
+    <circle class="donut-progress" cx="100" cy="100" r="90"></circle>
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#3b82f6" />
+        <stop offset="100%" stop-color="#a855f7" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="donut-text">
+    <span id="overallPercent">0%</span>
+    <p id="overallCount">0 / 65 Tasks</p>
+  </div>
+</section>
+
+<!-- SUBJECT SECTIONS -->
+<main class="subjects">
+
+<div class="card" id="mathSection">
+  <h2>Mathematics</h2>
+  <div class="progress-bar"><div class="progress-fill" id="mathProgress"></div></div>
+  <div class="checkbox-grid" id="mathBoxes"></div>
+</div>
+
+<div class="card" id="bioSection">
+  <h2>Biology</h2>
+  <div class="progress-bar"><div class="progress-fill" id="bioProgress"></div></div>
+  <div class="checkbox-grid" id="bioBoxes"></div>
+</div>
+
+<div class="card" id="engSection">
+  <h2>English</h2>
+  <div class="progress-bar"><div class="progress-fill" id="engProgress"></div></div>
+  <div class="checkbox-grid" id="engBoxes"></div>
+</div>
+
+<div class="card" id="phySection">
+  <h2>Physics</h2>
+  <div class="progress-bar"><div class="progress-fill" id="phyProgress"></div></div>
+  <div class="checkbox-grid" id="phyBoxes"></div>
+</div>
+
+<div class="card" id="satSection">
+  <h2>SAT</h2>
+  <div class="progress-bar"><div class="progress-fill" id="satProgress"></div></div>
+  <div class="checkbox-grid" id="satBoxes"></div>
+</div>
+
+<div class="card" id="chemSection">
+  <h2>Chemistry</h2>
+  <div class="progress-bar"><div class="progress-fill" id="chemProgress"></div></div>
+  <div class="checkbox-grid" id="chemBoxes"></div>
+</div>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
